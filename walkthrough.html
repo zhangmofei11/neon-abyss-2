@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthrough - Neon Abyss 2 Complete Guide</title>
+    <meta name="description" content="Neon Abyss 2 complete walkthrough. Level-by-level guide with secret rooms, objectives, and all unlockables.">
+    <meta name="keywords" content="Neon Abyss 2 walkthrough, Neon Abyss 2 guide, level guide, levels">
+    <link rel="canonical" href="https://neon-abyss-2.wiki/walkthrough.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            pink: '#FF2D95',
+                            cyan: '#00F5FF',
+                            purple: '#B026FF',
+                            green: '#39FF14',
+                            yellow: '#FFE700',
+                            orange: '#FF6B35',
+                            dark: '#0A0A0F',
+                            darker: '#050508'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Space Grotesk', 'sans-serif'],
+                        'body': ['Rajdhani', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background: #050508;
+            min-height: 100vh;
+            font-family: 'Rajdhani', sans-serif;
+        }
+        .gradient-border {
+            position: relative;
+            background-clip: padding-box;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(135deg, #00F5FF, #FF2D95, #B026FF);
+            border-radius: inherit;
+            z-index: -1;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            padding: 1px;
+        }
+        .glass-panel {
+            background: linear-gradient(135deg, rgba(10,10,15,0.8) 0%, rgba(5,5,8,0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-6px); }
+        .neon-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00F5FF, #FF2D95, #B026FF, transparent);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00F5FF, #FF2D95, #B026FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .neon-bg {
+            background: radial-gradient(ellipse at top, rgba(0,245,255,0.03) 0%, transparent 50%),
+                        radial-gradient(ellipse at bottom right, rgba(176,38,255,0.03) 0%, transparent 50%);
+        }
+        .scanline {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 2px);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+    <div class="scanline"></div>
+
+    <header class="glass-panel sticky top-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center gap-4 group">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center">
+                        <span class="font-heading font-bold text-black text-xl">N2</span>
+                    </div>
+                    <div>
+                        <span class="font-heading font-bold text-2xl text-white tracking-wider">NEON ABYSS</span>
+                        <span class="block text-xs text-neon-cyan font-medium tracking-widest">SEQUEL</span>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center gap-2">
+                    <a href="/" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Home</a>
+                    <a href="walkthrough.html" class="px-5 py-2 text-neon-cyan bg-neon-cyan/10 rounded-lg border border-neon-cyan/30 font-medium">Walkthrough</a>
+                    <a href="bosses.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Bosses</a>
+                    <a href="items.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Items</a>
+                    <a href="hatchmon.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Hatchmon</a>
+                    <a href="tips.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Tips</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="neon-bg">
+        <div class="max-w-7xl mx-auto px-8 py-16">
+            <div class="text-center mb-16">
+                <h1 class="font-heading text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+                    <span class="text-gradient">WALKTHROUGH</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Master every level with detailed strategies and secret locations.</p>
+            </div>
+
+            <div class="neon-line mb-16"></div>
+
+            <!-- Levels -->
+            <div class="space-y-8">
+                <!-- Level 1 -->
+                <div class="glass-panel rounded-2xl p-8 gradient-border card-hover">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-neon-cyan/20 flex items-center justify-center border border-neon-cyan/30">
+                                <span class="text-neon-cyan font-heading text-2xl font-bold">01</span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-white">SECTOR ALPHA</h3>
+                                <p class="text-gray-500 text-sm">Tutorial Level - Entry Point</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-500/30">Tutorial</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Duration:</span><span class="text-white text-sm font-medium ml-2">15-20 min</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Secret Rooms:</span><span class="text-neon-cyan text-sm font-medium ml-2">3</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Difficulty:</span><span class="text-green-400 text-sm font-medium ml-2">Easy</span></div>
+                    </div>
+                    <div class="border-t border-white/5 pt-6">
+                        <h4 class="text-white font-semibold mb-3">Key Objectives:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Learn basic movement and shooting
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Find the first Weapon Crate
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Defeat Mini-Boss: Glitch Guard
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Locate exit portal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 2 -->
+                <div class="glass-panel rounded-2xl p-8 gradient-border card-hover">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-neon-pink/20 flex items-center justify-center border border-neon-pink/30">
+                                <span class="text-neon-pink font-heading text-2xl font-bold">02</span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-white">NEON DISTRICT</h3>
+                                <p class="text-gray-500 text-sm">City Streets - First Real Challenge</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-medium rounded-full border border-yellow-500/30">Main Story</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Duration:</span><span class="text-white text-sm font-medium ml-2">25-35 min</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Secret Rooms:</span><span class="text-neon-cyan text-sm font-medium ml-2">5</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Difficulty:</span><span class="text-yellow-400 text-sm font-medium ml-2">Normal</span></div>
+                    </div>
+                    <div class="border-t border-white/5 pt-6">
+                        <h4 class="text-white font-semibold mb-3">Key Objectives:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Navigate rooftop pathways
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Find first Hatchmon Egg
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Defeat Boss: Neon Samurai
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Unlock weapon upgrade station
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="glass-panel rounded-2xl p-8 gradient-border card-hover">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-neon-purple/20 flex items-center justify-center border border-neon-purple/30">
+                                <span class="text-neon-purple font-heading text-2xl font-bold">03</span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-white">CHROME FACTORY</h3>
+                                <p class="text-gray-500 text-sm">Industrial Zone - Mechanical Enemies</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-medium rounded-full border border-orange-500/30">Mid-Game</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Duration:</span><span class="text-white text-sm font-medium ml-2">30-45 min</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Secret Rooms:</span><span class="text-neon-cyan text-sm font-medium ml-2">7</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Difficulty:</span><span class="text-orange-400 text-sm font-medium ml-2">Hard</span></div>
+                    </div>
+                    <div class="border-t border-white/5 pt-6">
+                        <h4 class="text-white font-semibold mb-3">Key Objectives:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Destroy patrol drones
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Find weapon: Plasma Cutter
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Boss: Assembly Line Guardian
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Unlock item fusion station
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 4 -->
+                <div class="glass-panel rounded-2xl p-8 gradient-border card-hover">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="flex items-center gap-5">
+                            <div class="w-16 h-16 rounded-2xl bg-red-500/20 flex items-center justify-center border border-red-500/30">
+                                <span class="text-red-400 font-heading text-2xl font-bold">04</span>
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold text-white">THEIA'S TEMPLE</h3>
+                                <p class="text-gray-500 text-sm">Final Zone - Face the Final Boss</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs font-medium rounded-full border border-red-500/30">Final</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Duration:</span><span class="text-white text-sm font-medium ml-2">40-60 min</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Secret Rooms:</span><span class="text-neon-cyan text-sm font-medium ml-2">10</span></div>
+                        <div class="bg-black/30 rounded-lg p-3"><span class="text-gray-500 text-xs">Difficulty:</span><span class="text-red-400 text-sm font-medium ml-2">Extreme</span></div>
+                    </div>
+                    <div class="border-t border-white/5 pt-6">
+                        <h4 class="text-white font-semibold mb-3">Key Objectives:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Traverse mirror dimension
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Collect 3 Key Fragments
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Defeat mini-bosses (x3)
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <span class="text-neon-green">✓</span> Boss: THEIA - God of Vanity
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collectibles -->
+            <div class="neon-line mt-16 mb-12"></div>
+            <section>
+                <h2 class="font-heading text-3xl font-bold text-white mb-8 text-center">COLLECTIBLES</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="glass-panel rounded-xl p-5 text-center">
+                        <div class="text-3xl mb-2">🥚</div>
+                        <h3 class="text-white font-semibold">Hatchmon Eggs</h3>
+                        <p class="text-neon-purple text-sm font-medium">50+</p>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 text-center">
+                        <div class="text-3xl mb-2">💎</div>
+                        <h3 class="text-white font-semibold">Neon Shards</h3>
+                        <p class="text-neon-cyan text-sm font-medium">500+</p>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 text-center">
+                        <div class="text-3xl mb-2">🗝️</div>
+                        <h3 class="text-white font-semibold">Key Fragments</h3>
+                        <p class="text-neon-pink text-sm font-medium">3 per run</p>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 text-center">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <h3 class="text-white font-semibold">Power Cores</h3>
+                        <p class="text-neon-green text-sm font-medium">20+</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <div class="neon-line mb-8"></div>
+            <p class="text-gray-500 text-sm">&copy; 2026 Neon Abyss 2 Guide. Not affiliated with Veewo Games.</p>
+        </div>
+    </footer>
+</body>
+</html>

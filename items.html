@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Synergies - Neon Abyss 2 Complete Guide</title>
+    <meta name="description" content="Neon Abyss 2 item synergies guide. Unlimited stacking combos, best items, and build recommendations.">
+    <meta name="keywords" content="Neon Abyss 2 items, item synergies, builds, roguelike items">
+    <link rel="canonical" href="https://neon-abyss-2.wiki/items.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neon: { pink: '#FF2D95', cyan: '#00F5FF', purple: '#B026FF', green: '#39FF14', yellow: '#FFE700', orange: '#FF6B35' }
+                    },
+                    fontFamily: { 'heading': ['Space Grotesk', 'sans-serif'], 'body': ['Rajdhani', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { box-sizing: border-box; }
+        body { background: #050508; min-height: 100vh; font-family: 'Rajdhani', sans-serif; }
+        .gradient-border { position: relative; background-clip: padding-box; }
+        .gradient-border::before { content: ''; position: absolute; inset: -1px; background: linear-gradient(135deg, #00F5FF, #FF2D95, #B026FF); border-radius: inherit; z-index: -1; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; padding: 1px; }
+        .glass-panel { background: linear-gradient(135deg, rgba(10,10,15,0.8) 0%, rgba(5,5,8,0.9) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); }
+        .neon-line { height: 1px; background: linear-gradient(90deg, transparent, #00F5FF, #FF2D95, #B026FF, transparent); }
+        .text-gradient { background: linear-gradient(135deg, #00F5FF, #FF2D95, #B026FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .neon-bg { background: radial-gradient(ellipse at top, rgba(0,245,255,0.03) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(176,38,255,0.03) 0%, transparent 50%); }
+        .scanline { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 2px); z-index: 9999; }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+    <div class="scanline"></div>
+
+    <header class="glass-panel sticky top-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center gap-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center"><span class="font-heading font-bold text-black text-xl">N2</span></div>
+                    <div><span class="font-heading font-bold text-2xl text-white tracking-wider">NEON ABYSS</span><span class="block text-xs text-neon-cyan font-medium tracking-widest">SEQUEL</span></div>
+                </a>
+                <nav class="hidden lg:flex items-center gap-2">
+                    <a href="/" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Home</a>
+                    <a href="walkthrough.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Walkthrough</a>
+                    <a href="bosses.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Bosses</a>
+                    <a href="items.html" class="px-5 py-2 text-neon-purple bg-neon-purple/10 rounded-lg border border-neon-purple/30 font-medium">Items</a>
+                    <a href="hatchmon.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Hatchmon</a>
+                    <a href="tips.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Tips</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="neon-bg">
+        <div class="max-w-7xl mx-auto px-8 py-16">
+            <div class="text-center mb-16">
+                <h1 class="font-heading text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight"><span class="text-gradient">ITEM SYNERGIES</span></h1>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Unlimited stacking combinations. Build your overpowered loadout.</p>
+            </div>
+
+            <div class="neon-line mb-12"></div>
+
+            <!-- Synergy Categories -->
+            <section class="mb-12">
+                <h2 class="font-heading text-2xl font-bold text-white mb-6">DAMAGE SYNERGIES</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="glass-panel rounded-2xl p-6 gradient-border">
+                        <h3 class="text-neon-pink font-heading font-bold text-xl mb-4">🔥 Fire Build</h3>
+                        <div class="space-y-2 text-gray-400 text-sm">
+                            <p><span class="text-white">Base:</span> Fire Weapon + Molotov x3</p>
+                            <p><span class="text-white">Stack:</span> +50% burn damage per item</p>
+                            <p><span class="text-white">Synergy:</span> "Inferno" - Burns spread to all enemies</p>
+                        </div>
+                        <div class="mt-4 p-3 bg-neon-orange/10 rounded-lg border border-neon-orange/20">
+                            <span class="text-neon-orange text-sm font-medium">Result: Infinite burn damage stacking</span>
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-2xl p-6 gradient-border">
+                        <h3 class="text-neon-cyan font-heading font-bold text-xl mb-4">❄️ Ice Build</h3>
+                        <div class="space-y-2 text-gray-400 text-sm">
+                            <p><span class="text-white">Base:</span> Frost Weapon + Ice Shard x3</p>
+                            <p><span class="text-white">Stack:</span> +30% slow per item</p>
+                            <p><span class="text-white">Synergy:</span> "Frozen" - Enemies shatter at 0 HP</p>
+                        </div>
+                        <div class="mt-4 p-3 bg-neon-cyan/10 rounded-lg border border-neon-cyan/20">
+                            <span class="text-neon-cyan text-sm font-medium">Result: Everything frozen, instant kill</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="font-heading text-2xl font-bold text-white mb-6">DEFENSE SYNERGIES</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="glass-panel rounded-2xl p-6 gradient-border">
+                        <h3 class="text-neon-green font-heading font-bold text-xl mb-4">🛡️ Tank Build</h3>
+                        <div class="space-y-2 text-gray-400 text-sm">
+                            <p><span class="text-white">Base:</span> Energy Shield + HP+ x5</p>
+                            <p><span class="text-white">Stack:</span> +100 HP per item, shield regen</p>
+                            <p><span class="text-white">Synergy:</span> "Impervious" - Brief invincibility on hit</p>
+                        </div>
+                        <div class="mt-4 p-3 bg-neon-green/10 rounded-lg border border-neon-green/20">
+                            <span class="text-neon-green text-sm font-medium">Result: Near-immortal build</span>
+                        </div>
+                    </div>
+                    <div class="glass-panel rounded-2xl p-6 gradient-border">
+                        <h3 class="text-neon-purple font-heading font-bold text-xl mb-4">👻 Phase Build</h3>
+                        <div class="space-y-2 text-gray-400 text-sm">
+                            <p><span class="text-white">Base:</span> Phase Cloak + Blink x3</p>
+                            <p><span class="text-white">Stack:</span> +20% dodge chance per item</p>
+                            <p><span class="text-white">Synergy:</span> "Ghost" - Enemies phase through you</p>
+                        </div>
+                        <div class="mt-4 p-3 bg-neon-purple/10 rounded-lg border border-neon-purple/20">
+                            <span class="text-neon-purple text-sm font-medium">Result: 90%+ dodge, all attacks miss</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top Items -->
+            <section>
+                <h2 class="font-heading text-2xl font-bold text-white mb-6">TOP TIER ITEMS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">⚡</span>
+                            <h3 class="text-white font-semibold">Power Core</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm">+25% damage. Best early game pickup.</p>
+                        <div class="mt-2 text-neon-yellow text-xs">★★★★★</div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">💀</span>
+                            <h3 class="text-white font-semibold">Soul Siphon</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm">Heal 5% on kill. Essential for survivability.</p>
+                        <div class="mt-2 text-neon-yellow text-xs">★★★★★</div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🎯</span>
+                            <h3 class="text-white font-semibold">Piercing Rounds</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm">Bullets pierce 3 enemies. Boss melting.</p>
+                        <div class="mt-2 text-neon-yellow text-xs">★★★★☆</div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">💫</span>
+                            <h3 class="text-white font-semibold">Time Warp</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm">Slow enemies 30%. Great with any build.</p>
+                        <div class="mt-2 text-neon-yellow text-xs">★★★★☆</div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🔋</span>
+                            <h3 class="text-white font-semibold">Battery</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm">+50% weapon charge speed. God-tier.</p>
+                        <div class="mt-2 text-neon-yellow text-xs">★★★★★</div>
+                    </div>
+                    <div class="glass-panel rounded-xl p-5 card-hover">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🌀</span>
+                            <h3 class="text-white font-semibold">Vortex</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm">Pulls enemies together. AoE dream.</p>
+                        <div class="mt-2 text-neon-yellow text-xs">★★★★☆</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="border-t border-white/5 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <div class="neon-line mb-8"></div>
+            <p class="text-gray-500 text-sm">&copy; 2026 Neon Abyss 2 Guide. Not affiliated with Veewo Games.</p>
+        </div>
+    </footer>
+</body>
+</html>
