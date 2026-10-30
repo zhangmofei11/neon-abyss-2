@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tips & Tricks - Neon Abyss 2 Complete Guide</title>
-    <meta name="description" content="Neon Abyss 2 tips and tricks. Advanced strategies, secrets, and speedrun techniques.">
+    <meta name="description" content="Tips &amp; Tricks: Master Neon Abyss 2 with advanced strategies. Neon Abyss 2 Wiki guide covering Bosses, Hatchmon, Items, Tips.">
     <meta name="keywords" content="Neon Abyss 2 tips, tricks, advanced strategies, secrets">
     <link rel="canonical" href="https://neon-abyss-2.online/tips.html">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -103,6 +103,22 @@
       ]
     }
     </script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <meta name="theme-color" content="#050508">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Neon Abyss 2 Wiki">
+    <meta property="og:title" content="Tips &amp; Tricks - Neon Abyss 2 Complete Guide">
+    <meta property="og:description" content="Tips &amp; Tricks: Master Neon Abyss 2 with advanced strategies. Neon Abyss 2 Wiki guide covering Bosses, Hatchmon, Items, Tips.">
+    <meta property="og:url" content="https://neon-abyss-2.online/tips.html">
+    <meta property="og:image" content="https://neon-abyss-2.online/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Neon Abyss 2 Wiki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tips &amp; Tricks - Neon Abyss 2 Complete Guide">
+    <meta name="twitter:description" content="Tips &amp; Tricks: Master Neon Abyss 2 with advanced strategies. Neon Abyss 2 Wiki guide covering Bosses, Hatchmon, Items, Tips.">
+    <meta name="twitter:image" content="https://neon-abyss-2.online/og-image.png">
 </head>
 <body class="text-gray-100 antialiased">
     <div class="scanline"></div>
@@ -122,7 +138,23 @@
                     <a href="hatchmon.html" class="px-5 py-2 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">Hatchmon</a>
                     <a href="tips.html" class="px-5 py-2 text-neon-green bg-neon-green/10 rounded-lg border border-neon-green/30 font-medium">Tips</a>
                 </nav>
+                            <button id="mobile-menu-btn" class="lg:hidden p-2 -mr-2 rounded-lg transition-all" style="color:#d1d5db" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button></div>        <div id="mobile-menu" class="hidden lg:hidden fixed inset-0 z-[9999] overflow-y-auto" style="background-color:rgba(8,8,12,0.98)">
+            <div class="flex items-center justify-between px-4 py-4" style="border-bottom:1px solid rgba(255,255,255,0.08)">
+                <span style="color:#9ca3af;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">Menu</span>
+                <button id="mobile-menu-close" class="p-2 -mr-2 rounded-lg transition-all" style="color:#d1d5db" aria-label="Close menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+                </button>
             </div>
+            <div class="px-4 py-3 space-y-1">
+                <a href="walkthrough.html" class="block px-4 py-3 rounded-lg transition-all" style="color:#d1d5db">Walkthrough</a>
+                <a href="bosses.html" class="block px-4 py-3 rounded-lg transition-all" style="color:#d1d5db">Bosses</a>
+                <a href="items.html" class="block px-4 py-3 rounded-lg transition-all" style="color:#d1d5db">Items</a>
+                <a href="hatchmon.html" class="block px-4 py-3 rounded-lg transition-all" style="color:#d1d5db">Hatchmon</a>
+                <a href="tips.html" class="block px-4 py-3 rounded-lg transition-all font-bold" style="color:#fff;background-color:rgba(255,255,255,0.08)">Tips</a>
+            </div>
+        </div>
         </div>
     </header>
 
@@ -249,5 +281,23 @@
         </div>
     </section>
 </footer>
+    <script>
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var close = document.getElementById('mobile-menu-close');
+      if (!btn || !menu) return;
+      function setOpen(open) {
+        menu.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+      if (close) close.addEventListener('click', function () { setOpen(false); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !menu.classList.contains('hidden')) setOpen(false);
+      });
+    })();
+    </script>
 </body>
 </html>
